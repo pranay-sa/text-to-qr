@@ -1,9 +1,77 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.0.4">
-  <diagram name="Page-1" id="uNHZBHgErhpXPap2VSKs">
-    <mxGraphModel>
+  <diagram name="Architecture" id="uNHZBHgErhpXPap2VSKs">
+    <mxGraphModel dx="1097" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-1" value="User Input Layer (Text / Voice Prompt)" style="shape=rectangle;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-2" value="AI Agent Layer &#xa;NLP + On-Device LLM (Intent Understanding)" style="shape=rectangle;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="130" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-3" target="NOfqRCVCKqc0UCC4pwFA-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-3" value="Scenario-to-Settings Mapper (Rules + AI)" style="shape=rectangle;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-4" target="NOfqRCVCKqc0UCC4pwFA-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-4" value="Samsung Camera SDK  " style="shape=rectangle;rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="300" y="412.5" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-6" value="User Feedback UI (Apply / Revert + Explanation)" style="shape=rectangle;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="530" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-1" target="NOfqRCVCKqc0UCC4pwFA-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-8" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-2" target="NOfqRCVCKqc0UCC4pwFA-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-15" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1.012;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="430" as="sourcePoint" />
+            <mxPoint x="604" y="70" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="770" y="470" />
+              <mxPoint x="770" y="300" />
+              <mxPoint x="750" y="140" />
+              <mxPoint x="710" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-16" value="Apply settings to camera hardware" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="412.5" width="80" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-4" target="NOfqRCVCKqc0UCC4pwFA-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="400" as="sourcePoint" />
+            <mxPoint x="640" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-22" target="NOfqRCVCKqc0UCC4pwFA-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NOfqRCVCKqc0UCC4pwFA-22" target="NOfqRCVCKqc0UCC4pwFA-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-22" value="MCP Server / MiddleWare " style="shape=rectangle;rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="310" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-24" value="Acts as a Bridge between AI agent and camera" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="322.5" width="110" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="NOfqRCVCKqc0UCC4pwFA-26" value="Converts Scenario to exact parameters received from LLM" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="640" y="230" width="110" height="35" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
